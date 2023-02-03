@@ -10,7 +10,20 @@
   <body style="margin: 0; padding: 0">
     <sg-page header-position-type="sticky" footer-position-type="sticky">
       <h1 slot="header" style="background: azure">Header</h1>
-      <div style="height: 150vh; background-color: bisque"></div>
+      <sg-carousel>
+        <img src="https://picsum.photos/id/1/200/300?image=1" alt="Image 1" />
+        <img src="https://picsum.photos/id/2/300/200?image=2" alt="Image 2" />
+        <img src="https://picsum.photos/id/3/300/300?image=3" alt="Image 3" />
+        <div>
+          <h1>Something else</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+            aperiam ut minima. Magni itaque alias, harum natus molestias
+            blanditiis sint fugiat deserunt doloribus repellat nam ea est
+            dignissimos amet ipsa.
+          </p>
+        </div>
+      </sg-carousel>
       <h2 slot="footer" style="background: azure">Footer</h2>
     </sg-page>
   </body>
