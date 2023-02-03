@@ -4,5 +4,5 @@ import styles from './header.style';
 
 @customElement('sg-header')
 export class SgHeader extends SgHeaderFooter {
-  static styles = styles;
+  static styles = [...SgHeaderFooter.styles, styles];
 }

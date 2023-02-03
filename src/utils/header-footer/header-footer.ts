@@ -5,7 +5,7 @@ import styles from './header-footer.style';
 type PositionType = 'absolute' | 'fixed' | 'sticky';
 
 export abstract class SgHeaderFooter extends LitElement {
-  static styles = styles;
+  static styles = [styles];
 
   @property({attribute: 'position-type', reflect: true})
   positionType: PositionType = 'sticky';

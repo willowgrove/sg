@@ -4,7 +4,7 @@ import styles from './app.style';
 
 @customElement('sg-app')
 export class SgApp extends LitElement {
-  static styles = styles;
+  static styles = [styles];
 
   render() {
     return html`<slot></slot>`;

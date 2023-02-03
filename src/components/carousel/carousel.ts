@@ -4,7 +4,7 @@ import styles from './carousel.style';
 
 @customElement('sg-carousel')
 export class SgCarousel extends LitElement {
-  static styles = styles;
+  static styles = [styles];
 
   @property({attribute: 'current-index', type: Number, reflect: true})
   currentIndex = 0;
