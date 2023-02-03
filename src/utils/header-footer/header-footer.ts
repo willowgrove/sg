@@ -2,7 +2,7 @@ import {html, LitElement} from 'lit';
 import {property} from 'lit/decorators.js';
 import styles from './header-footer.style';
 
-type PositionType = 'absolute' | 'fixed' | 'sticky';
+type PositionType = 'absolute' | 'fixed' | 'relative' | 'sticky';
 
 export abstract class SgHeaderFooter extends LitElement {
   static styles = [styles];

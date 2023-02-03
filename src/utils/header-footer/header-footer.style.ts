@@ -7,6 +7,7 @@ export default css`
     left: 0;
     right: 0;
     height: fit-content;
+    z-index: 1;
   }
 
   :host([position-type='absolute']) {
