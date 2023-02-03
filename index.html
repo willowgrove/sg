@@ -14,7 +14,7 @@
         <h1>This is a header</h1>
         <h2 slot="after">...</h2>
       </sg-header>
-      <sg-carousel>
+      <sg-carousel style="height: 50vh">
         <img src="https://picsum.photos/id/1/200/300?image=1" alt="Image 1" />
         <img src="https://picsum.photos/id/2/300/200?image=2" alt="Image 2" />
         <img src="https://picsum.photos/id/3/300/300?image=3" alt="Image 3" />
@@ -31,7 +31,7 @@
       <sg-bar>
         <div slot="before" style="border: 1px solid black">before</div>
         <div style="border: 1px solid black">
-          <sg-bar orientation="vertical" style="height: 500px"
+          <sg-bar orientation="vertical" style="height: 50vh"
             ><div slot="before" style="border: 1px solid black">before</div>
             <div style="border: 1px solid black">main</div>
             <div slot="after" style="border: 1px solid black">
@@ -41,6 +41,7 @@
         </div>
         <div slot="after" style="border: 1px solid black">after</div>
       </sg-bar>
+      <sg-alert>This is an alert!</sg-alert>
       <sg-footer style="background: bisque">
         <h2 slot="before">Logo</h2>
         <h1>This is a footer</h1>
