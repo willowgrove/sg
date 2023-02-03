@@ -1,2 +1,2 @@
-export * from './sg-page';
-export * from './sg-carousel';
+export * from './components/page/page';
+export * from './components/carousel/carousel';
