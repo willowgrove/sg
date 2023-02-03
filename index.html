@@ -24,6 +24,19 @@
           </p>
         </div>
       </sg-carousel>
+      <sg-bar>
+        <div slot="before" style="border: 1px solid black">before</div>
+        <div style="border: 1px solid black">
+          <sg-bar orientation="vertical" style="height: 500px"
+            ><div slot="before" style="border: 1px solid black">before</div>
+            <div style="border: 1px solid black">main</div>
+            <div slot="after" style="border: 1px solid black">
+              after
+            </div></sg-bar
+          >
+        </div>
+        <div slot="after" style="border: 1px solid black">after</div>
+      </sg-bar>
       <h2 slot="footer" style="background: azure">Footer</h2>
     </sg-page>
   </body>
