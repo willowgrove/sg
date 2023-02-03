@@ -17,7 +17,7 @@ export default css`
     position: absolute;
     top: 0;
     left: 0;
-    height: auto;
+    height: 100%;
     max-height: 100%;
     transition: transform 0.5s ease;
   }
