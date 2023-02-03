@@ -37,7 +37,7 @@ export class SgCarousel extends LitElement {
       object-fit: contain;
     }
 
-    button {
+    #button-container > button {
       display: flex;
       position: absolute;
       padding: 0.5em;
@@ -51,20 +51,44 @@ export class SgCarousel extends LitElement {
       cursor: pointer;
     }
 
-    button:hover {
+    #button-container > button:hover {
       filter: contrast(0.7);
     }
 
-    button:active {
+    #button-container > button:active {
       filter: contrast(0.5);
     }
 
-    button.left {
+    #button-container > button.left {
       left: 10px;
     }
 
-    button.right {
+    #button-container > button.right {
       right: 10px;
+    }
+
+    #indicator-container {
+      display: flex;
+      position: absolute;
+      padding: 2px;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: fit-content;
+      background: hsl(0, 0%, 50%, 0.5);
+      border-radius: 10px;
+    }
+
+    #indicator-container > .indicator {
+      --size: 10px;
+
+      flex: 1;
+      height: var(--size);
+      width: var(--size);
+      margin: 3px;
+      background: hsl(0, 0%, 100%);
+      border-radius: 100%;
+      cursor: pointer;
     }
   `;
 
@@ -82,12 +106,26 @@ export class SgCarousel extends LitElement {
       <div id="slider" style="width: ${(this.childElementCount ?? 1) * 100}%;">
         <slot></slot>
       </div>
-      <button class="left" @click="${this.goToPrevious}">
-        ${this.renderSVGArrow({direction: 'left'})}
-      </button>
-      <button class="right" @click="${this.goToNext}">
-        ${this.renderSVGArrow({direction: 'right'})}
-      </button>
+      <div id="button-container">
+        <button class="left" @click="${this.goToPrevious}">
+          ${this.renderSVGArrow({direction: 'left'})}
+        </button>
+        <button class="right" @click="${this.goToNext}">
+          ${this.renderSVGArrow({direction: 'right'})}
+        </button>
+      </div>
+      <div id="indicator-container">
+        ${new Array(this.childElementCount ?? 0)
+          ?.fill(0)
+          ?.map(
+            (_, i) =>
+              html`<div
+                class="indicator"
+                style=${i === this.currentIndex ? 'opacity: 1' : 'opacity: 0.5'}
+                @click=${() => (this.currentIndex = i)}
+              ></div>`
+          )}
+      </div>
     `;
   }
 
