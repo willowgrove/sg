@@ -44,6 +44,28 @@
           </p>
         </div>
       </sg-carousel>
+      <div style="width: 100%; display: flex">
+        <sg-card
+          style="height: 10rem; width: 30%; background: var(--sg-color-primary)"
+          ><h1>Card</h1></sg-card
+        >
+        <sg-card
+          style="
+            height: 10rem;
+            width: 30%;
+            background: var(--sg-color-secondary);
+          "
+          ><h1>Card</h1></sg-card
+        >
+        <sg-card
+          style="
+            height: 10rem;
+            width: 30%;
+            background: var(--sg-color-tertiary);
+          "
+          ><h1>Card</h1></sg-card
+        >
+      </div>
       <sg-bar>
         <div slot="before" style="border: 1px solid black">before</div>
         <div style="border: 1px solid black">
@@ -57,6 +79,7 @@
         </div>
         <div slot="after" style="border: 1px solid black">after</div>
       </sg-bar>
+      <div style="height: 100vh; width: 100%">=== whitespace below ===</div>
       <sg-footer style="background: bisque">
         <h2 slot="before">Logo</h2>
         <h1>This is a footer</h1>
