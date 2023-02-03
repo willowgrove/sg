@@ -2,11 +2,14 @@ import {css} from 'lit';
 
 export default css`
   :host {
+    flex: 1 1 auto;
     display: flex;
     position: relative;
     height: 20rem;
     width: 100%;
     overflow: hidden;
+    border-radius: var(--sg-border-radius-md);
+    margin: var(--sg-whitespace-md);
   }
 
   #slider {
@@ -28,10 +31,6 @@ export default css`
     flex: 1;
     height: 100%;
     min-width: 0;
-  }
-
-  ::slotted(img) {
-    object-fit: contain;
   }
 
   #button-container > button {
