@@ -6,12 +6,20 @@ import styles from './carousel.style';
 export class SgCarousel extends LitElement {
   static styles = [styles];
 
+  private refreshTimeoutId?: number;
+
   @property({attribute: 'current-index', type: Number, reflect: true})
   currentIndex = 0;
 
+  @property({type: Number, reflect: true})
+  timeout = 5;
+
   updated(changedProperties: Map<string, unknown>) {
     if (changedProperties.has('currentIndex')) {
+      this.resetRefreshTimeout();
       this.updateSlider();
+    } else if (changedProperties.has('timeout')) {
+      this.resetRefreshTimeout();
     }
   }
 
@@ -82,5 +90,15 @@ export class SgCarousel extends LitElement {
     slider.style.transform = `translateX(-${
       this.currentIndex * (100 / this.childElementCount ?? 1)
     }%)`;
+  }
+
+  private resetRefreshTimeout() {
+    clearTimeout(this.refreshTimeoutId);
+    if (this.timeout > 0) {
+      this.refreshTimeoutId = setTimeout(
+        () => this.goToNext(),
+        this.timeout * 1000
+      );
+    }
   }
 }
