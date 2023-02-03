@@ -1,3 +1,5 @@
-export * from './components/page/page';
+export * from './components/app/app';
 export * from './components/carousel/carousel';
 export * from './components/bar/bar';
+export * from './components/header/header';
+export * from './components/footer/footer';

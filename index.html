@@ -8,8 +8,12 @@
     <script type="module" src="/src/index.ts"></script>
   </head>
   <body style="margin: 0; padding: 0">
-    <sg-page header-position-type="sticky" footer-position-type="sticky">
-      <h1 slot="header" style="background: azure">Header</h1>
+    <sg-app>
+      <sg-header style="background: bisque">
+        <h2 slot="before">Logo</h2>
+        <h1>This is a header</h1>
+        <h2 slot="after">...</h2>
+      </sg-header>
       <sg-carousel>
         <img src="https://picsum.photos/id/1/200/300?image=1" alt="Image 1" />
         <img src="https://picsum.photos/id/2/300/200?image=2" alt="Image 2" />
@@ -37,7 +41,11 @@
         </div>
         <div slot="after" style="border: 1px solid black">after</div>
       </sg-bar>
-      <h2 slot="footer" style="background: azure">Footer</h2>
-    </sg-page>
+      <sg-footer style="background: bisque">
+        <h2 slot="before">Logo</h2>
+        <h1>This is a footer</h1>
+        <h2 slot="after">...</h2>
+      </sg-footer>
+    </sg-app>
   </body>
 </html>
