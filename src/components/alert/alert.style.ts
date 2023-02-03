@@ -8,7 +8,6 @@ export default css`
     height: fit-content;
     background: var(--sg-color-success);
     border-radius: var(--sg-border-radius-md);
-    height: fit-content;
     width: 100%;
     padding: 5px 10px;
     margin: var(--sg-whitespace-md);
