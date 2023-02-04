@@ -5,3 +5,4 @@ export * from './components/header/header';
 export * from './components/footer/footer';
 export * from './components/alert/alert';
 export * from './components/card/card';
+export * from './components/collapse/collapse';
