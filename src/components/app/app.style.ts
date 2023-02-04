@@ -4,6 +4,7 @@ export default css`
   :host {
     --sg-border-radius-md: 5px;
 
+    --sg-whitespace-xs: 1px;
     --sg-whitespace-sm: 2px;
     --sg-whitespace-md: 5px;
 
@@ -15,6 +16,7 @@ export default css`
     --sg-color-danger: hsl(352, 81%, 59%);
 
     --sg-color-shadow: hsl(0, 0%, 0%, 0.5);
+    --sg-color-highlight: hsl(0, 0%, 100%, 0.5);
   }
 
   :host {
