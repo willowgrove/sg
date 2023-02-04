@@ -7,6 +7,7 @@ export default css`
     --sg-whitespace-xs: 1px;
     --sg-whitespace-sm: 2px;
     --sg-whitespace-md: 5px;
+    --sg-whitespace-lg: 8px;
 
     --sg-color-primary: hsl(218, 100%, 61%);
     --sg-color-secondary: hsl(199, 100%, 62%);

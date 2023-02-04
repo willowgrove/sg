@@ -13,5 +13,19 @@ export default css`
     margin: var(--sg-whitespace-md);
     box-shadow: var(--sg-whitespace-sm) var(--sg-whitespace-sm)
       var(--sg-whitespace-md) 0 var(--sg-color-shadow);
+    transition: box-shadow 0.5s;
+  }
+
+  :host([button]) {
+    cursor: pointer;
+  }
+
+  :host([button]:hover) {
+    box-shadow: var(--sg-whitespace-md) var(--sg-whitespace-md)
+      var(--sg-whitespace-lg) 0 var(--sg-color-shadow);
+  }
+  :host([button]:hover:active) {
+    box-shadow: inset var(--sg-whitespace-md) var(--sg-whitespace-md)
+      var(--sg-whitespace-lg) 0 var(--sg-color-shadow);
   }
 `;
