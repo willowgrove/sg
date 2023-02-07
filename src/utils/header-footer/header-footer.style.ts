@@ -2,9 +2,6 @@ import {css} from 'lit';
 
 export default css`
   :host {
-    flex: 1 1 auto;
-    display: flex;
-    position: relative;
     left: 0;
     right: 0;
     height: fit-content;

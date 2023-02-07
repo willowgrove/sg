@@ -1,10 +1,11 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import styleForAll from '../../utils/style-for-all';
 import styles from './button.style';
 
 @customElement('sg-button')
 export class SgButton extends LitElement {
-  static styles = [styles];
+  static styles = [styleForAll, styles];
 
   @property({reflect: true})
   href?: string;

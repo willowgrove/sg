@@ -1,10 +1,11 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import styleForAll from '../../utils/style-for-all';
 import styles from './carousel.style';
 
 @customElement('sg-carousel')
 export class SgCarousel extends LitElement {
-  static styles = [styles];
+  static styles = [styleForAll, styles];
 
   private refreshTimeoutId?: number;
 

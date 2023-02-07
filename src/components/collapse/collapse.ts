@@ -1,11 +1,12 @@
 import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {createRef, ref} from 'lit/directives/ref.js';
+import styleForAll from '../../utils/style-for-all';
 import styles from './collapse.style';
 
 @customElement('sg-collapse')
 export class SgCollapse extends LitElement {
-  static styles = [styles];
+  static styles = [styleForAll, styles];
 
   private contentContainerRef = createRef();
 

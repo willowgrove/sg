@@ -1,12 +1,6 @@
 import {css} from 'lit';
 
 export default css`
-  :host {
-    flex: 1 1 auto;
-    display: flex;
-    position: relative;
-  }
-
   :host([orientation='vertical']) {
     flex-direction: column;
   }
@@ -21,10 +15,10 @@ export default css`
   }
 
   [part~='main'] {
-    flex: 1 1 auto;
+    flex: 1;
   }
 
   ::slotted(*) {
-    flex: 1 1 auto;
+    flex: 1;
   }
 `;

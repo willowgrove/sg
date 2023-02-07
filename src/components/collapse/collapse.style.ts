@@ -2,9 +2,6 @@ import {css} from 'lit';
 
 export default css`
   :host {
-    flex: 1 1 auto;
-    display: flex;
-    position: relative;
     height: fit-content;
     border-radius: var(--sg-border-radius-md);
     width: 100%;
@@ -23,10 +20,10 @@ export default css`
   }
 
   .collapse-header {
-    flex: 1 1 auto;
     display: block;
     position: relative;
-    padding: 5px 10px;
+    flex: 1 1 auto;
+    padding: var(--sg-whitespace-md);
     backdrop-filter: contrast(0.9);
     cursor: pointer;
   }
@@ -40,15 +37,16 @@ export default css`
   }
 
   .collapse-content {
-    flex: 1 1 auto;
     display: block;
     position: relative;
+    flex: 1 1 auto;
+    padding: 0;
     overflow: hidden;
     height: 0;
     transition: height 0.3s ease-out;
   }
 
   :host([open]) .collapse-content {
-    padding: 5px 10px;
+    padding: var(--sg-whitespace-md);
   }
 `;

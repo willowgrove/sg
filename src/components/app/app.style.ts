@@ -21,10 +21,6 @@ export default css`
   }
 
   :host {
-    flex: 1 1 auto;
-    display: flex;
-    position: relative;
-    height: auto;
     width: 100%;
     flex-wrap: wrap;
     font-family: Arial, Helvetica, sans-serif;

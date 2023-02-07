@@ -2,9 +2,6 @@ import {css} from 'lit';
 
 export default css`
   :host {
-    flex: 1 1 auto;
-    display: flex;
-    position: relative;
     height: 20rem;
     width: 100%;
     overflow: hidden;
@@ -24,13 +21,11 @@ export default css`
 
   slot {
     display: flex;
-    width: 100%;
+    flex: 1;
   }
 
   ::slotted(*) {
     flex: 1;
-    height: 100%;
-    min-width: 0;
   }
 
   #button-container > button {

@@ -2,13 +2,11 @@ import {css} from 'lit';
 
 export default css`
   :host {
-    flex: 1 1 auto;
-    display: flex;
-    position: relative;
+    flex: 0 0 auto;
     height: fit-content;
+    width: auto;
     background: var(--sg-color-primary);
     border-radius: var(--sg-border-radius-md);
-    width: 100%;
     margin: var(--sg-whitespace-md);
     padding: var(--sg-whitespace-md) var(--sg-whitespace-md);
     box-shadow: var(--sg-whitespace-sm) var(--sg-whitespace-sm)
@@ -32,9 +30,9 @@ export default css`
   }
 
   a {
-    flex: 1 1 auto;
     display: flex;
     position: relative;
+    flex: 1;
     text-decoration: none;
     color: inherit;
     appearance: none;
@@ -43,8 +41,8 @@ export default css`
   }
 
   slot {
-    flex: 1 1 auto;
     display: flex;
+    flex: 1;
     align-content: center;
     justify-content: center;
   }

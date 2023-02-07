@@ -1,11 +1,12 @@
 import {html, LitElement} from 'lit';
 import {property} from 'lit/decorators.js';
+import styleForAll from '../style-for-all';
 import styles from './header-footer.style';
 
 type PositionType = 'absolute' | 'fixed' | 'relative' | 'sticky';
 
 export abstract class SgHeaderFooter extends LitElement {
-  static styles = [styles];
+  static styles = [styleForAll, styles];
 
   @property({attribute: 'position-type', reflect: true})
   positionType: PositionType = 'sticky';
