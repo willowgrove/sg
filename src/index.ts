@@ -7,3 +7,4 @@ export * from './components/alert/alert';
 export * from './components/card/card';
 export * from './components/collapse/collapse';
 export * from './components/button/button';
+export {html, render} from 'lit';
